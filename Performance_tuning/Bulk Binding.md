@@ -1,4 +1,4 @@
-# Bulk Collect
+# Bulk Binding
 ## Defination
    There are 2 engines  one is PLSQL Engine and other is SQL Engine. All the procedural statements like IF clause are sent to PLSQL Engine and 
    other SQL statements like select are sent to SQL Engine for their excution .
