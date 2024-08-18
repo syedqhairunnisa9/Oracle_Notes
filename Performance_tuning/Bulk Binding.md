@@ -28,6 +28,8 @@ So instead of switching one by one , the binding is done for all the variable at
 ##### In-Bind
  Values from PLSQL engine is assigned to SQl Engine
  Eg: INSERT, UPDATE,MERGE
+ ###### FOR ALL
+ In-Bind can be achieved using FOR ALL statement. Using the it converts collection into a table format
 
 ##### Out-Bind
 Values from SQLengine returned back to PLSQL Engine
