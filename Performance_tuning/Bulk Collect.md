@@ -1,5 +1,5 @@
 # Bulk Collect
-## Scenario
+## Defination
    There are 2 engines  one is PLSQL Engine and other is SQL Engine. All the procedural statements like IF clause are sent to PLSQL Engine and 
    other SQL statements like select are sent to SQL Engine for their excution .
    Once the excution is done at SQL Engine it is sent back to PLSQL Engine.
@@ -21,4 +21,23 @@
 In the above code for every iteration of i which is 1000 times code is being switched between the engines which decreases the performance
 
 So now 1000 times variables are binded to PLSQL.
-So instead of switching one by one , the binding is done for all the variable at once or in less number of switching, This is called Bulk `Binding/Bulk Collect`
+So instead of switching one by one , the binding is done for all the variable at once or in less number of switching, This is called `Bulk Binding/Bulk Collect`
+
+## Types of Binding
+
+##### In-Bind
+ Values from PLSQL engine is assigned to SQl Engine
+ Eg: INSERT, UPDATE,MERGE
+
+##### Out-Bind
+Values from SQLengine returned back to PLSQL Engine
+Eg: INTO
+
+##### Define
+when SELECT OR FETCH is used
+
+` A query that used bulk SQL can return any number of rows without using a FETCH statement for each row`
+
+
+
+
