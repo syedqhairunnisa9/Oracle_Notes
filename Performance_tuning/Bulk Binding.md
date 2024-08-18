@@ -33,7 +33,8 @@ So instead of switching one by one , the binding is done for all the variable at
 
  ```plsql
 FOR ALL I in lv_num_list.first .. lv_num_list.last
-          INSERT INTO A values (lv_num_list(I)); ```
+          INSERT INTO A values (lv_num_list(I));
+```
 
 ##### Out-Bind
 Values from SQLengine returned back to PLSQL Engine
