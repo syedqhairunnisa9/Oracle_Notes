@@ -52,12 +52,19 @@ Now the same above code when Record data type is used
 end;
 ```
 
-### Collection Vs Record
+#### Collection Vs Record
 
 it is ordered group of logically related elements and they have same data type where as in Records it can have different data types.
 Internal elemenets in collection are called elemenets and in Records it is called as fields.
 
 Eg: List of Employees, Address of employees
+
+### Record Type
+- Can be defined in Anonymous blocks/function/procedures/packages
+- Cannot be defined at schema level so it cannot be ADT attribute 
+   datatype.
+- To define record type, specify name and field types
+- Can also define NOT NULL constraint for its fields
 
 
 
