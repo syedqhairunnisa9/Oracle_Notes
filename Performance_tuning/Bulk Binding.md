@@ -38,10 +38,28 @@ FOR ALL I in lv_num_list.first .. lv_num_list.last
 
 ##### Out-Bind
 Values from SQLengine returned back to PLSQL Engine
-Eg: INTO
+Eg: RETURNING INTO
+
+```plsql
+  UPDATE emp SET sal=sal+100
+  RETURNING sal INTO lv_num_list;
+```
+
+
 
 ##### Define
-when SELECT OR FETCH is used
+when SELECT OR FETCH statement from SQL assigns/holds the value to PLSQL
+
+```plsql
+DECLARE
+  type t_num_list_type is table of number
+  lv_num_list t_num_list_type :=t_num_list_type();
+BEGIN    
+   SELECT sal
+   BULK_COLLECT INTO lv_num_list
+   FROM emp
+
+
 
 ` A query that used bulk SQL can return any number of rows without using a FETCH statement for each row`
 
