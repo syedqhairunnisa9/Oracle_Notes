@@ -61,6 +61,23 @@ BEGIN
  END;
 ```
 
+3. Using with Cursor
+
+```plsql
+DECLARE
+    cursor c1 select ename,sal,deptno from emp where eno=50;
+    lv_emp_rec emp%ROWTYPE;
+BEGIN
+    open c1;
+    fetch c1 into lv_emp_rec;
+    close c1;
+    dbms_output.put_line('Name '|lv_emp_rec.ename);
+    dbms_output.put_line('Sal '|lv_emp_rec.sal);
+END;
+```
+
+
+
 
 
 
