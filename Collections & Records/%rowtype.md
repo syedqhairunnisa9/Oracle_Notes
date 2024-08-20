@@ -43,5 +43,24 @@ INSERT INTO emp_bkp VALUES v_emp_rec;
 END;
 ```
 
+2. Updating Table values
+
+```plsql
+DECLARE
+    v_emp_rec emp%ROWTYPE;
+BEGIN
+    SELECT *
+    INTO v_emp_rec
+    FROM emp WHERE eno=50;
+   v_emp_rec.sal:=v_emp_rec.sal+1000;
+   v_emp_rec.dno:=50;
+
+    UPDATE emp
+    set row=v_emp_rec
+    WHERE eno=50;
+ END;
+```
+
+
 
 
